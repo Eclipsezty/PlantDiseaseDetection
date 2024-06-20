@@ -1,12 +1,12 @@
 import numpy as np
 import pandas as pd
 import os
-
+import matplotlib
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import matplotlib.pyplot as plt
 import cv2
 import seaborn as sns
-
+matplotlib.use('TkAgg')
 sns.set_style('darkgrid')
 import shutil
 from sklearn.metrics import confusion_matrix, classification_report
@@ -20,13 +20,13 @@ from keras.metrics import categorical_crossentropy
 from keras import regularizers
 from keras.models import Model
 
-sdir = r'F:/Study/FYP/training/Grape3'
+sdir = r'F:\Research\CAMIC\New CAMIC\Train'
 working_dir = r'./'  # directory to store augmented images
 
 min_samples = 40  # set limit for minimum images a class must have to be included in the dataframe
 max_samples = 1000  # since each class has more than 200 images all classes will be trimmed to have 200 images per class
 num_samples = 1000  # number of samples in each class exactly
-epochs = 40
+epochs = 30
 img_size = (200, 200)  # size of augmented images
 batch_size = 20
 
@@ -217,7 +217,7 @@ x = Dropout(rate=.4, seed=123)(x)
 output = Dense(Class_num, activation='softmax')(x)
 model = Model(inputs=base_model.input, outputs=output)
 lr = .001  # start with this learning rate
-model.summary()
+# model.summary()
 model.compile(Adamax(learning_rate=lr), loss='categorical_crossentropy', metrics=['accuracy'])
 
 history = model.fit(x=train_gen, epochs=epochs, verbose=1, validation_data=valid_gen,
@@ -300,7 +300,7 @@ def predict(test_gen):
 predict(test_gen)
 
 save_path = "F:/Study/FYP/training/models"
-save_name = "Grape3-EfficientNet_e40" + '.h5'
+save_name = "Rice-EfficientNet_e30" + '.h5'
 model_save_path = os.path.join(save_path, save_name)
 model.save(model_save_path)
 print('model was saved as ', model_save_path)
