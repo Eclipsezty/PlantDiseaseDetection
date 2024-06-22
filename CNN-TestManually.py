@@ -16,13 +16,13 @@ from tensorflow.python.ops.numpy_ops import np_config
 np_config.enable_numpy_behavior()
 
 
-my_model = keras.models.load_model("F:/Study/FYP/training/models/Rice-EfficientNet_e10.h5")
+my_model = keras.models.load_model("F:/Study/FYP/training/models/Rice-EfficientNet_e50.h5")
 
 
 
 
 dataset = tf.keras.preprocessing.image_dataset_from_directory(
-    "F:/Research/CAMIC/New CAMIC/Train",  # load dataset from filename
+    "F:/Research/CAMIC/New CAMIC/Test",  # load dataset from filename
 )
 
 

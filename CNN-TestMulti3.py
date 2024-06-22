@@ -23,16 +23,16 @@ np_config.enable_numpy_behavior()
 
 # my_model = keras.models.load_model("F:/Study/FYP/training/models/plant disease__81.37.h5")
 # my_model = keras.models.load_model("F:/Study/FYP/training/models/plant disease__99.50.h5")
-my_model = keras.models.load_model("F:/Study/FYP/training/models/Grape3-Xception_e30_9637.h5")
+my_model = keras.models.load_model("F:/Study/FYP/training/models/Rice-InceptionV3_e30.h5")
 # my_model2 = keras.models.load_model("F:/Study/FYP/training/models/Grape3-2_e20+2.32+__100.0.h5")
-my_model2 = keras.models.load_model("F:/Study/FYP/training/models/Grape3-Eff_e40_9747.h5")
+my_model2 = keras.models.load_model("F:/Study/FYP/training/models/Rice-MobileNetV2_e30.h5")
 #my_model4 = keras.models.load_model("F:/Study/FYP/training/models/Grape3-bi__100.0.h5")
-my_model3 = keras.models.load_model("F:/Study/FYP/training/models/Grape3-bi-EffB3_9402.h5")
+my_model3 = keras.models.load_model("F:/Study/FYP/training/models/Rice-EfficientNet_Bi_e30.h5")
 
 
 
 dataset = tf.keras.preprocessing.image_dataset_from_directory(
-    "Grape3-val",  # load dataset from filename
+    "F:/Research/CAMIC/New CAMIC/Test",  # load dataset from filename
 )
 
 
@@ -80,30 +80,30 @@ def ergodic_pics(path):
 
         if(confidence>80):
             confidence_avg+=confidence
-            if(predicted_class=="Grape___Black_rot"):
+            if(predicted_class=="Rice___Brown_Spot"):
                 countBR += 1
-            elif(predicted_class=="Grape___Esca_(Black_Measles)"):
+            elif(predicted_class=="Rice___Healthy"):
                 countE+=1
-            elif(predicted_class=="Grape___healthy"):
+            elif(predicted_class=="Rice___Leaf_Blast"):
                 countH+=1
-            elif(predicted_class=="Grape___Leaf_blight_(Isariopsis_Leaf_Spot)"):
+            elif(predicted_class=="Rice___Neck_Blast"):
                 countL+=1
         else:
             predicted_class, confidence = predict(my_model2, image)
             confidence_avg += confidence
-            if (predicted_class == "Grape___Black_rot"):
+            if (predicted_class == "Rice___Brown_Spot"):
                 countBR+=1
-            elif (predicted_class == "Grape___Esca_(Black_Measles)"):
+            elif (predicted_class == "Rice___Healthy"):
                 predicted_class, confidence = predict(my_model3, image)
 
-                if (predicted_class == "Grape___Black_rot"):
+                if (predicted_class == "Rice___Brown_Spot"):
                         countBR += 1
-                elif (predicted_class == "Grape___Esca_(Black_Measles)"):
+                elif (predicted_class == "Rice___Healthy"):
                         countE += 1
 
-            elif (predicted_class == "Grape___healthy"):
+            elif (predicted_class == "Rice___Leaf_Blast"):
                 countH += 1
-            elif (predicted_class == "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)"):
+            elif (predicted_class == "Rice___Neck_Blast"):
                 countL += 1
 
         print(f"Predicted: {predicted_class}. Confidence: {confidence}%")
@@ -116,13 +116,13 @@ def ergodic_pics(path):
 
 
 
-acc1, len1, resultm1= ergodic_pics("F:/Study/FYP/training/Grape3-val/Grape___Black_rot")
+acc1, len1, resultm1= ergodic_pics("F:/Research/CAMIC/New CAMIC/Test/Rice___Brown_Spot")
 print("**********************************************************************************************************************")
-acc2,len2,resultm2 =ergodic_pics("F:/Study/FYP/training/Grape3-val/Grape___Esca_(Black_Measles)")
+acc2,len2,resultm2 =ergodic_pics("F:/Research/CAMIC/New CAMIC/Test/Rice___Healthy")
 print("**********************************************************************************************************************")
-acc3,len3,resultm3=ergodic_pics("F:/Study/FYP/training/Grape3-val/Grape___healthy")
+acc3,len3,resultm3=ergodic_pics("F:/Research/CAMIC/New CAMIC/Test/Rice___Leaf_Blast")
 print("**********************************************************************************************************************")
-acc4,len4,resultm4=ergodic_pics("F:/Study/FYP/training/Grape3-val/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)")
+acc4,len4,resultm4=ergodic_pics("F:/Research/CAMIC/New CAMIC/Test/Rice___Neck_Blast")
 
 acc_total = (acc1*len1+acc2*len2+acc3*len3+acc4*len4)/(len1+len2+len3+len4)
 cm = [resultm1,resultm2,resultm3,resultm4]
@@ -133,13 +133,13 @@ print("confusion matrix: ", cm)
 
 
 #
-# acc1, len1 = ergodic_pics("F:/Study/FYP/training/Grape3-val/Grape___Black_rot")
+# acc1, len1 = ergodic_pics("F:/Research/CAMIC/New CAMIC/Test/Rice___Brown_Spot")
 # print("**********************************************************************************************************************")
-# acc2,len2 =ergodic_pics("F:/Study/FYP/training/Grape3-val/Grape___Esca_(Black_Measles)")
+# acc2,len2 =ergodic_pics("F:/Research/CAMIC/New CAMIC/Test/Rice___Healthy")
 # print("**********************************************************************************************************************")
-# acc3,len3=ergodic_pics("F:/Study/FYP/training/Grape3-val/Grape___healthy")
+# acc3,len3=ergodic_pics("F:/Research/CAMIC/New CAMIC/Test/Rice___Leaf_Blast")
 # print("**********************************************************************************************************************")
-# acc4,len4=ergodic_pics("F:/Study/FYP/training/Grape3-val/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)")
+# acc4,len4=ergodic_pics("F:/Research/CAMIC/New CAMIC/Test/Rice___Neck_Blast")
 #
 # acc_total = (acc1*len1+acc2*len2+acc3*len3+acc4*len4)/(len1+len2+len3+len4)
 # print("total acc: ",acc_total)

@@ -20,7 +20,7 @@ from keras.metrics import categorical_crossentropy
 from keras import regularizers
 from keras.models import Model
 
-sdir = r'F:\Research\CAMIC\New CAMIC\Train'
+sdir = r'F:\Research\CAMIC\New CAMIC\Bi-Train'
 working_dir = r'./'  # directory to store augmented images
 
 min_samples = 40  # set limit for minimum images a class must have to be included in the dataframe
@@ -206,7 +206,9 @@ def show_image_samples(gen):
 # show_image_samples(train_gen)
 
 img_shape = (img_size[0], img_size[1], 3)
-base_model = tf.keras.applications.efficientnet.EfficientNetB3(include_top=False, weights="imagenet",
+# base_model = tf.keras.applications.efficientnet.EfficientNetB3(include_top=False, weights="imagenet",
+#                                                                input_shape=img_shape, pooling='max')
+base_model = tf.keras.applications.InceptionV3(include_top=False, weights="imagenet",
                                                                input_shape=img_shape, pooling='max')
 base_model.trainable = True
 x = base_model.output
@@ -300,7 +302,8 @@ def predict(test_gen):
 predict(test_gen)
 
 save_path = "F:/Study/FYP/training/models"
-save_name = "Rice-EfficientNet_e30" + '.h5'
+save_name = "Rice-EfficientNet_Bi_e30" + '.h5'
+# save_name = "Rice-InceptionV3_e30" + '.h5'
 model_save_path = os.path.join(save_path, save_name)
 model.save(model_save_path)
 print('model was saved as ', model_save_path)
