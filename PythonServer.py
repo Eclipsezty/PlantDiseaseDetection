@@ -6,6 +6,8 @@ from io import BytesIO
 import numpy as np
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+import matplotlib
+matplotlib.use('TkAgg')  # 或者尝试其他 backend 如 'Agg', 'Qt5Agg', 'TkAgg' 等
 import matplotlib.pyplot as plt
 import cv2
 import seaborn as sns
@@ -15,13 +17,13 @@ from tensorflow import keras
 from tensorflow.python.ops.numpy_ops import np_config
 np_config.enable_numpy_behavior()
 
-address = ('192.168.192.217', 6666)
+address = ('192.168.0.45', 6666)
 
-my_model = keras.models.load_model("F:/Study/FYP/training/models/Grape3-Xception_e30_9637.h5")
-my_model2 = keras.models.load_model("F:/Study/FYP/training/models/Grape3-Eff_e50_9626.h5")
+my_model = keras.models.load_model("F:/Study/FYP/training/models/Rice-InceptionResNetV2_NoPool_e30.h5")
+my_model2 = keras.models.load_model("F:/Study/FYP/training/models/Rice-InceptionResNetV2_NoPool_e30.h5")
 
 dataset = tf.keras.preprocessing.image_dataset_from_directory(
-    "Grape3",  # load dataset from filename to get class names
+    r"F:\Research\CAMIC\New CAMIC\Train"  # load dataset from filename to get class names
 )
 
 def predict(model, img):
@@ -31,6 +33,7 @@ def predict(model, img):
     # increasing dimension, then it participate in tensor model calculation
     predictions = model.predict(img_array)
     class_names = dataset.class_names
+    print(class_names)
 
     predicted_class = class_names[np.argmax(predictions[0])]
     confidence = round(100 * (np.max(predictions[0])), 2)

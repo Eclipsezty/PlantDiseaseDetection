@@ -16,13 +16,14 @@ from tensorflow.python.ops.numpy_ops import np_config
 np_config.enable_numpy_behavior()
 
 
-my_model = keras.models.load_model("F:/Study/FYP/training/models/Rice-EfficientNet_e50.h5")
+my_model = keras.models.load_model("F:/Study/FYP/training/models/Rice-InceptionResNetV2_NoPool_e30.h5")
 
 
 
 
 dataset = tf.keras.preprocessing.image_dataset_from_directory(
-    "F:/Research/CAMIC/New CAMIC/Test",  # load dataset from filename
+    # "F:/Research/CAMIC/New CAMIC/RiceDiseaseDataset/validation",  # load dataset from filename
+    "F:/Research/CAMIC/New CAMIC/Train",  # load dataset from filename
 )
 
 
@@ -71,6 +72,14 @@ def ergodic_pics(path):
             countH+=1
         elif(predicted_class=="Rice___Neck_Blast"):
             countL+=1
+        # if(predicted_class=="BrownSpot"):
+        #     countBR+=1
+        # elif(predicted_class=="Healthy"):
+        #     countE+=1
+        # elif(predicted_class=="Hispa"):
+        #     countH+=1
+        # elif(predicted_class=="LeafBlast"):
+        #     countL+=1
 
         print(f"Predicted: {predicted_class}. Confidence: {confidence}%")
     confidence_avg/=len(img_list)
@@ -80,6 +89,14 @@ def ergodic_pics(path):
     #print("class accuracy:",acc)
     return acc,len(img_list),resultm
 
+#
+# acc1, len1, resultm1= ergodic_pics("F:/Research/CAMIC/New CAMIC/RiceDiseaseDataset/validation/BrownSpot")
+# print("**********************************************************************************************************************")
+# acc2,len2,resultm2 =ergodic_pics("F:/Research/CAMIC/New CAMIC/RiceDiseaseDataset/validation/Healthy")
+# print("**********************************************************************************************************************")
+# acc3,len3,resultm3=ergodic_pics("F:/Research/CAMIC/New CAMIC/RiceDiseaseDataset/validation/Hispa")
+# print("**********************************************************************************************************************")
+# acc4,len4,resultm4=ergodic_pics("F:/Research/CAMIC/New CAMIC/RiceDiseaseDataset/validation/LeafBlast")
 
 acc1, len1, resultm1= ergodic_pics("F:/Research/CAMIC/New CAMIC/Test/Rice___Brown_Spot")
 print("**********************************************************************************************************************")
@@ -88,6 +105,13 @@ print("*************************************************************************
 acc3,len3,resultm3=ergodic_pics("F:/Research/CAMIC/New CAMIC/Test/Rice___Leaf_Blast")
 print("**********************************************************************************************************************")
 acc4,len4,resultm4=ergodic_pics("F:/Research/CAMIC/New CAMIC/Test/Rice___Neck_Blast")
+
+
+
+
+
+
+
 acc_total = (acc1*len1+acc2*len2+acc3*len3+acc4*len4)/(len1+len2+len3+len4)
 cm = [resultm1,resultm2,resultm3,resultm4]
 
