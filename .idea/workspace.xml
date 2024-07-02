@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c893b6e8-1d37-475d-ac8e-a5383c71f9ea" name="Changes" comment="Updated to rice dataset">
-      <change afterPath="$PROJECT_DIR$/CNN-GoogleNet.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/Data1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PythonServer-CN.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNN-EfficientNetB3.py" beforeDir="false" afterPath="$PROJECT_DIR$/CNN-EfficientNetB3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNN-TestManually.py" beforeDir="false" afterPath="$PROJECT_DIR$/CNN-TestManually.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonServer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,29 +48,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
-    "WebServerToolWindowPanel.toolwindow.show.date": "false",
-    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
-    "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "last_opened_file_path": "F:/Study/FYP/training/Image",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Study/FYP/training/Image&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Study\FYP\training\Image" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.PythonServer">
+  <component name="RunManager" selected="Python.PythonServer-CN">
     <configuration name="AgriProj" type="PythonConfigurationType" factoryName="Python" singleton="false">
       <module name="training" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -163,7 +159,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="PythonServer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="PythonServer-CN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="training" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -173,7 +169,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonServer.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonServer-CN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -182,7 +178,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ShowDataset" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="PythonServer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="training" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -195,7 +191,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ShowDataset.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonServer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -229,18 +225,18 @@
     <list>
       <item itemvalue="Python.AgriProj" />
       <item itemvalue="Python.PythonServer" />
+      <item itemvalue="Python.PythonServer-CN" />
       <item itemvalue="Python.CNN-EfficientNetB3" />
       <item itemvalue="Python.CNN-TestMulti3" />
       <item itemvalue="Python.CNN-TestManually" />
-      <item itemvalue="Python.ShowDataset" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.PythonServer-CN" />
         <item itemvalue="Python.PythonServer" />
         <item itemvalue="Python.CNN-TestManually" />
         <item itemvalue="Python.CNN-EfficientNetB3" />
         <item itemvalue="Python.CNN-TestMulti3" />
-        <item itemvalue="Python.ShowDataset" />
       </list>
     </recent_temporary>
   </component>
@@ -319,7 +315,8 @@
       <workItem from="1718773082093" duration="842000" />
       <workItem from="1718787967171" duration="30022000" />
       <workItem from="1719043024121" duration="17522000" />
-      <workItem from="1719540429659" duration="1425000" />
+      <workItem from="1719540429659" duration="15468000" />
+      <workItem from="1719914656201" duration="1362000" />
     </task>
     <task id="LOCAL-00001" summary="Updated to rice dataset">
       <created>1719027445162</created>
@@ -328,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1719027445162</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated server">
+      <created>1719542191444</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719542191444</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
