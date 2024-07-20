@@ -17,7 +17,7 @@ from tensorflow import keras
 from tensorflow.python.ops.numpy_ops import np_config
 np_config.enable_numpy_behavior()
 
-address = ('192.168.206.217', 6666)
+address = ('192.168.133.217', 6666)
 
 my_model = keras.models.load_model("F:/Study/FYP/training/models/Rice-InceptionResNetV2_NoPool_e30.h5")
 my_model2 = keras.models.load_model("F:/Study/FYP/training/models/Rice-InceptionResNetV2_NoPool_e30.h5")
@@ -97,7 +97,7 @@ while True:
     # plt.title(f"Predicted: {predicted_class}.\n Confidence: {confidence}%", fontsize=36)
     # plt.axis("off")
     # plt.show()
-    if(confidence<60):
+    if(confidence<50):
         result = "无法识别，请重新拍照"
         print("可信度低：",confidence)
     else:
