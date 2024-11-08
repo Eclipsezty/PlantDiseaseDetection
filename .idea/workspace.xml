@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c893b6e8-1d37-475d-ac8e-a5383c71f9ea" name="Changes" comment="Updated Chinese server">
+      <change afterPath="$PROJECT_DIR$/detection_results.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNN-TestManually.py" beforeDir="false" afterPath="$PROJECT_DIR$/CNN-TestManually.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PythonServer-CN.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonServer-CN.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +60,7 @@
     &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Study/FYP/training/Image&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/UniMelb/23S2/90014/VO-Budgerigar-master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
@@ -70,7 +72,7 @@
       <recent name="F:\Study\FYP\training\Image" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.CNN-TestManually">
+  <component name="RunManager" selected="Python.PythonServer-CN">
     <configuration name="AgriProj" type="PythonConfigurationType" factoryName="Python" singleton="false">
       <module name="training" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -119,6 +121,9 @@
       <module name="training" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -229,8 +234,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.CNN-TestManually" />
         <item itemvalue="Python.PythonServer-CN" />
+        <item itemvalue="Python.CNN-TestManually" />
         <item itemvalue="Python.PythonServer" />
         <item itemvalue="Python.CNN-EfficientNetB3" />
         <item itemvalue="Python.CNN-TestMulti3" />
@@ -315,7 +320,15 @@
       <workItem from="1719540429659" duration="15468000" />
       <workItem from="1719914656201" duration="1589000" />
       <workItem from="1720087877338" duration="1515000" />
-      <workItem from="1721455420899" duration="5976000" />
+      <workItem from="1721455420899" duration="6061000" />
+      <workItem from="1723096187825" duration="1047000" />
+      <workItem from="1725967999996" duration="1094000" />
+      <workItem from="1726053682591" duration="941000" />
+      <workItem from="1727176072617" duration="983000" />
+      <workItem from="1729295961791" duration="5595000" />
+      <workItem from="1730989295496" duration="2111000" />
+      <workItem from="1731057053369" duration="5148000" />
+      <workItem from="1731072700556" duration="3281000" />
     </task>
     <task id="LOCAL-00001" summary="Updated to rice dataset">
       <created>1719027445162</created>
@@ -331,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1719542191444</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Updated Chinese server">
+      <created>1721474049469</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1721474049469</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -23,7 +23,8 @@ my_model = keras.models.load_model("F:/Study/FYP/training/models/Rice-InceptionR
 
 dataset = tf.keras.preprocessing.image_dataset_from_directory(
     # "F:/Research/CAMIC/New CAMIC/RiceDiseaseDataset/validation",  # load dataset from filename
-    "F:/Research/CAMIC/New CAMIC/Train",  # load dataset from filename
+    # "F:/Research/CAMIC/New CAMIC/Train",  # load dataset from filename
+    "F:/Research/CAMIC/New CAMIC/Test",  # load dataset from filename
 )
 
 
